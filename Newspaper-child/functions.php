@@ -829,6 +829,19 @@ function adsense_vignetta() { ?>
   </script>
 <?php }//adsense_vignetta
 
+function correlati_adsense() { ?>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-4951276053293022"
+     data-ad-slot="8682903751"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<?php }//correlati_adsense
+
+
 
 function correlati_4w() { ?>
   <!-- Correlati 4W -->

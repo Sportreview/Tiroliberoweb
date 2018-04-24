@@ -109,6 +109,10 @@ if (have_posts()) {
               adv_in_article();
             } ?>
             
+                 <?php if (function_exists('correlati_adsense')) {
+              correlati_adsense();
+            } ?>
+            
 			
             <?php if (function_exists('correlati_4w')) {
                 correlati_4w();
