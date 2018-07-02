@@ -49,11 +49,10 @@
   } ?>
 
 
-  <div class="newtekadv-mobile-top">
-    <?php if(function_exists('adv_top_mobile_other')) {
-      adv_top_mobile_other();
-    } ?>
-  </div>
+
+  <?php if (function_exists('adv_high_impact')) {
+    adv_high_impact();
+  } ?>
 
 
   <?php /* scroll to top */?>

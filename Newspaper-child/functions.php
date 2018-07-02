@@ -608,20 +608,36 @@ function adv_libs() { ?>
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
   </script>
-
   <script>
-    googletag.cmd.push(function() {
-      googletag.defineSlot('/21624773413/Tiroliberoweb.it/Top_Desktop', [[728, 90], [970, 250]], 'div-gpt-ad-Top_Desktop').addService(googletag.pubads());
-      googletag.defineSlot('/21624773413/Tiroliberoweb.it/Top_Mobile', [[320, 50], [320, 100]], 'div-gpt-ad-Top_Mobile').addService(googletag.pubads());
-      googletag.defineSlot('/21624773413/Tiroliberoweb.it/Mpu_Top', [300, 600], 'div-gpt-ad-Mpu_Top').addService(googletag.pubads());
+    if (!isMobileNewtek) {
+      googletag.cmd.push(function() {
       googletag.defineSlot('/21624773413/Tiroliberoweb.it/Mpu_Middle', [300, 250], 'div-gpt-ad-Mpu_Middle').addService(googletag.pubads());
-      googletag.defineSlot('/21624773413/Tiroliberoweb.it/Bottom_Mobile', [320, 50], 'div-gpt-ad-Bottom_Mobile').addService(googletag.pubads());
-      //googletag.pubads().enableSingleRequest();
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/skin', [1, 1], 'div-gpt-ad-1521736647284-1').setTargeting('Display_Ad_Size', ['Skin']).setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/skin', [1, 1], 'div-gpt-ad-1521736725656-1').setTargeting('Display_Ad_Size', ['Skin']).setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_banner', [[970, 250], [1056, 250], [728, 90], [980, 250]], 'div-gpt-ad-1521736647284-2').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_banner', [[1056, 250], [970, 250], [728, 90], [980, 250]], 'div-gpt-ad-1521736725656-2').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/motorinews24_responsive/homepage/top_mpu', [[300, 600], [300, 250]], 'div-gpt-ad-1521735814204-2').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_mpu', [[300, 600], [300, 250]], 'div-gpt-ad-1521736725656-3').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      //googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+    } else {
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/21624773413/Tiroliberoweb.it/Mpu_Middle', [300, 250], 'div-gpt-ad-Mpu_Middle').addService(googletag.pubads());
+      googletag.defineOutOfPageSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/high_impact', 'div-gpt-ad-1521736647284-0').setTargeting('Display_Ad_Size', ['Out-of-page']).setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineOutOfPageSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/high_impact', 'div-gpt-ad-1521736725656-0').setTargeting('Display_Ad_Size', ['Out-of-page']).setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_mpu', [300, 250], 'div-gpt-ad-1521736647284-3').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_banner', [320, 50], 'div-gpt-ad-1521736725656-2').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_banner', [320, 50], 'div-gpt-ad-1521736647284-2').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads());
+      googletag.defineSlot('/67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_mpu', [300, 250], 'div-gpt-ad-1521736725656-3').setTargeting('Display_Ad_Position', ['ATF']).addService(googletag.pubads()); 
+      googletag.pubads().enableSingleRequest();
       googletag.pubads().collapseEmptyDivs();
       googletag.enableServices();
     });
+    }
   </script>
-<?php }
+<?php }//adv_libs
 
 
 function adv_tag_manager() { ?>
@@ -643,30 +659,67 @@ function adv_tag_manager_noscript() { ?>
 <?php }//adv_tag_manager_noscript
 
 
-function adv_skin() { ?>
-  <script type="text/javascript">
-    simply_publisher = 74141;
-    simply_domain = 102923;
-    simply_space = 210223;
-    simply_ad_height = 1;
-    simply_ad_width = 1;
-    simply_callback = '';
-  </script>
-  <script type="text/javascript">
-    var cb = Math.round(new Date().getTime());
-    document.write('<scr'+'ipt type="text/javascript" src="'+ ('https:' == document.location.protocol ? 'https://' : 'http://') + 'optimized-by.4wnetwork.com/simply_loader.js?cb='+ cb +'"></scr' + 'ipt>');
+function adv_skin() {
+  if (is_front_page()) { ?>
+   <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/skin -->
+<div id='div-gpt-ad-1521736647284-1' style='height:1px; width:1px;'>
+<script>
+if (!isMobileNewtek) {
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736647284-1'); });
+} else {
+jQuery("#div-gpt-ad-1521736647284-1").hide();
+}
 </script>
-<?php }
+</div>
+  <?php } else { ?>
+   <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/skin -->
+    <div id='div-gpt-ad-1521736725656-1' style='height:1px; width:1px;'>
+      <script>
+        if (!isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736725656-1'); });
+        } else {
+          jQuery("#div-gpt-ad-1521736725656-1").hide();
+        }
+      </script>
+    </div>
+  <?php }
+}//adv_skin
+
+function adv_high_impact() {
+  if (is_front_page()) { ?>
+   <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/high_impact -->
+<div id='div-gpt-ad-1521736647284-0'>
+<script>
+        if (isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736647284-0'); });
+        } else {
+          jQuery("#div-gpt-ad-1521736647284-0").hide();
+        }
+      </script>
+    </div>
+  <?php } else { ?>
+    <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/high_impact -->
+    <div id='div-gpt-ad-1521736725656-0'>
+      <script>
+        if (isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736725656-0'); });
+        } else {
+          jQuery("#div-gpt-ad-1521736725656-0").hide();
+        }
+      </script>
+    </div>
+  <?php }
+}//adv_high_impact
 
 
 function adv_top_desktop() { ?>
-  <!-- /21624773413/Tiroliberoweb.it/Top_Desktop -->
-  <div id='div-gpt-ad-Top_Desktop'>
+ <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_banner -->
+  <div id='div-gpt-ad-1521736725656-2'>
   <script>
     if (!isMobileNewtek) {
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-Top_Desktop'); });
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736725656-2'); });
     } else {
-      jQuery("#div-gpt-ad-Top_Desktop").hide();
+      jQuery("#div-gpt-ad-1521736725656-2").hide();
     }
   </script>
   </div>
@@ -674,13 +727,13 @@ function adv_top_desktop() { ?>
 
 
 function adv_top_mobile() { ?>
-  <!-- /21624773413/Tiroliberoweb.it/Top_Mobile -->
-  <div id='div-gpt-ad-Top_Mobile'>
+  <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_mpu -->
+  <div id='div-gpt-ad-1521736647284-3'>
   <script>
     if (isMobileNewtek) {
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-Top_Mobile'); });
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736647284-3'); });
     } else {
-      jQuery("#div-gpt-ad-Top_Mobile").hide();
+      jQuery("#div-gpt-ad-1521736647284-3").hide();
     }
   </script>
   </div>
@@ -690,13 +743,13 @@ function adv_top_mobile() { ?>
 function adv_top_mobile_single() {
   if (is_single()) { ?>
     <script type="text/javascript">
-      top_mobile_content = '<!-- /21624773413/Tiroliberoweb.it/Top_Mobile -->\
-        <div id="div-gpt-ad-Top_Mobile">\
+      top_mobile_content = '<!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_mpu -->\
+        <div id="div-gpt-ad-1521736725656-3">\
         <script>\
           if (isMobileNewtek) {\
-            googletag.cmd.push(function() { googletag.display("div-gpt-ad-Top_Mobile"); });\
+            googletag.cmd.push(function() { googletag.display("div-gpt-ad-1521736725656-3"); });\
           } else {\
-            jQuery("#div-gpt-ad-Top_Mobile").hide();\
+            jQuery("#div-gpt-ad-1521736725656-3").hide();\
           }\
         <\/script>\
         <\/div>';
@@ -717,14 +770,34 @@ function adv_top_mobile_other() {
 }//adv_top_mobile_other
 
 
-function adv_mpu_top() { ?>
-  <!-- /21624773413/Tiroliberoweb.it/Mpu_Top -->
-  <div id='div-gpt-ad-Mpu_Top' style='height:600px; width:300px;'>
-  <script>
-  googletag.cmd.push(function() { googletag.display('div-gpt-ad-Mpu_Top'); });
-  </script>
-  </div>
-<?php }//adv_mpu_top
+function adv_mpu_top() {
+  if (is_front_page()) { ?>
+   <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_mpu -->
+<div id='div-gpt-ad-1521736647284-3'>
+<script>
+if (isMobileNewtek) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736647284-3'); });
+</script>
+ } else {
+        jQuery("#div-gpt-ad-1521736647284-3").hide();
+        }
+    </script>
+    </div>
+  <?php } else { ?>
+    <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_mpu -->
+    <div id='div-gpt-ad-1521736725656-3'>
+    <script>
+        if (isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736725656-3'); });
+        } else {
+        jQuery("#div-gpt-ad-1521736725656-3").hide();
+        }
+      </script>
+    </div>
+  <?php }
+}//adv_mpu_top
+
+
 
 
 function adv_mpu_middle() { ?>
@@ -737,14 +810,33 @@ function adv_mpu_middle() { ?>
 <?php }//adv_mpu_middle
 
 
-function adv_bottom_mobile() { ?>
-  <!-- /21624773413/Tiroliberoweb.it/Bottom_Mobile -->
-  <div id='div-gpt-ad-Bottom_Mobile' style='height:50px; width:320px;'>
-  <script>
-  googletag.cmd.push(function() { googletag.display('div-gpt-ad-Bottom_Mobile'); });
-  </script>
-  </div>
-<?php }//adv_bottom_mobile
+
+function adv_bottom_mobile() {
+  if (is_front_page()) { ?>
+   <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/homepage/top_banner -->
+<div id='div-gpt-ad-1521736647284-2' style='height:50px; width:320px;'>
+<script>
+        if (isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736647284-2'); });
+        } else {
+          jQuery("#div-gpt-ad-1521736647284-2").hide();
+        }
+      </script>
+    </div>
+  <?php } else { ?>
+    <!-- /67970281/display_thirdparty_it/tiroliberoweb_responsive/ros/top_banner -->
+    <div id='div-gpt-ad-1521736725656-2' style='height:50px; width:320px;'>
+      <script>
+        if (isMobileNewtek) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521736725656-2'); });
+        } else {
+          jQuery("#div-gpt-ad-1521736725656-2").hide();
+        }
+      </script>
+    </div>
+  <?php }
+}//adv_bottom_mobile
+
 
 
 function adv_in_feed() {
@@ -769,6 +861,7 @@ function adv_in_feed() {
 
 function adv_in_article() { ?>
   <script>
+  if (!isMobileNewtek) {
     var in_article = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"><\/script>\
       <ins class="adsbygoogle adv_inarticle"\
       style="display:block; text-align:center;"\
@@ -779,6 +872,9 @@ function adv_in_article() { ?>
       <script>\
       (adsbygoogle = window.adsbygoogle || []).push({});\
       <\/script>';
+       } else {
+      jQuery("#adv_in_article").hide();
+    }
       jQuery( ".td-post-content h2:nth-of-type(1)" ).after( in_article );
   </script>
 <?php }//adv_in_article
